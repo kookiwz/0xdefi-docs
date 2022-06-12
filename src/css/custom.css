@@ -7,6 +7,9 @@
 
 /* You can override the default Infima variables here. */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;1,400&family=Inter:wght@400;500;600&display=swap");
 
 :root {

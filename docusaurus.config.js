@@ -6,7 +6,7 @@ const config = {
   title: 'Oxdefi',
   tagline: 'Documentation Portal',
   url: 'https://docs.0xdefi.finance/',
-  baseUrl: '/', 
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
@@ -77,7 +77,7 @@ const config = {
               {
                 label: '0xDefi-Contracts',
                 href: 'https://github.com/0xDefi-Finance',
-              }
+              },
             ],
           },
           {
@@ -119,6 +119,19 @@ const config = {
         respectPrefersColorScheme: false,
       },
     }),
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require('tailwindcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
 };
 
 module.exports = config;
