@@ -7,6 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import SearchBar from '@theme-original/SearchBar';
 import { InformationCircleIcon, CodeIcon, QuestionMarkCircleIcon } from '@heroicons/react/outline';
 import styled from '@emotion/styled';
+import Header from './components/Header';
 
 export const quickLinks = [
   {
@@ -215,7 +216,9 @@ export default function Home() {
     <Layout
       title={`0xDefi Protocol Docs`}
       description="Official Documentation for the 0xDefi Protocol"
+      
     >
+      {/* <Header/> */}
       <Container>
         <DocsHeader>
           <div

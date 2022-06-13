@@ -40,10 +40,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '0xDefi',
+
+    
         logo: {
-          alt: 'Sushiswap Logo',
+          alt: '0xDefi Logo',
           src: 'img/logo_big.png',
+
         },
         items: [
           {
@@ -62,21 +64,23 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/0xDefi-finance',
+            to: 'https://github.com/0xDefi-finance',
             label: 'GitHub',
             position: 'right',
+
+            
           },
         ],
       },
       footer: {
-        style: 'dark',
+
         links: [
           {
             title: 'GitHub',
             items: [
               {
                 label: '0xDefi-Contracts',
-                href: 'https://github.com/0xDefi-Finance',
+                to: 'https://github.com/0xDefi-Finance',
               },
             ],
           },
@@ -85,11 +89,11 @@ const config = {
             items: [
               {
                 label: 'Home',
-                href: 'https://0xdefi.finance',
+                to: 'https://0xdefi.finance',
               },
               {
                 label: 'App',
-                href: 'https://app.0xdefi.finance',
+                to: 'https://app.0xdefi.finance',
               },
             ],
           },
@@ -98,11 +102,11 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/3q3d8gTwBn',
+                to: 'https://discord.gg/3q3d8gTwBn',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/0xdefi_finance',
+                to: 'https://twitter.com/0xdefi_finance',
               },
             ],
           },
