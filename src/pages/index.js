@@ -267,19 +267,19 @@ export default function Home() {
 
         <TwoRow
           style={{
-            gap: '56px',
+gap:"10em",
             marginTop: '4rem',
           }}
         >
-          <div>
+          <div className=''>
             <h2>Getting Started</h2>
-            <p>
+            <p className='my-3'>
               Explore these docs to get started.
             </p>
             <div>
               {Guides.map((guide) => (
                 <Link style={{ textDecoration: 'none' }} key={guide.title} to={guide.to}>
-                  <Card key={guide.title} style={{ marginBottom: '1rem' }}>
+                  <Card key={guide.title} style={{ marginBottom: '1rem',borderRadius:"10px" }}>
                     <LinkRow>
                       <div style={{ display: 'flex', alignItems: 'center' }}>
                         <h3 style={{ marginBottom: '0rem' }}>{guide.title}</h3>
@@ -301,10 +301,10 @@ export default function Home() {
           </div>
           <div>
             <h2>FAQ Links</h2>
-            <p>Get better understanding of 0xDeFi by looking at our FAQs</p>
+            <p className='my-3'>Get better understanding of 0xDeFi by looking at our FAQs</p>
             {faqs.map((action) => (
               <Link style={{ textDecoration: 'none' }} href={action.href}>
-                <Card key={action.title} style={{ marginBottom: '1rem' }}>
+                <Card key={action.title} style={{ marginBottom: '1rem',borderRadius:"10px" }}>
                   <LinkRow>
                     {/* <StyledGithubIcon style={{ display: 'flex', alignItems: 'center' }}>
                       <svg

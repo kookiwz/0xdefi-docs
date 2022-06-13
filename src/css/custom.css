@@ -48,6 +48,8 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif !important;
+  font-size: 0.9em;
+
 }
 
 html[data-theme="dark"] {
@@ -88,7 +90,7 @@ html[data-theme="light"] {
   font-weight: 400;
   background :linear-gradient(90deg, rgba(34,36,0,0.44723827030812324) 0%, rgba(9,9,121,0.01866684173669464) 55%, rgba(0,212,255,1) 100%)
 }
-html[data-theme="dark"] body{
+/* html[data-theme="dark"] body{
   background: -webkit-gradient(linear, left bottom, right top, from(rgb(23, 14, 56)), to(#000000)) fixed;
 height: 100%;
 }
@@ -96,7 +98,7 @@ html[data-theme="light"] body{
   background: -webkit-gradient(linear, left bottom, right top, from(#e0e6ff), to(#ffffff)) fixed;
   height: 100%;
 
-}
+} */
 .markdown a {
   color: #3578e5;
 }
@@ -146,7 +148,7 @@ h4 {
 
 .navbar {
   align-items: center;
-  font-size: 0.9em ;
+
 }
 
 html[data-theme="dark"] .navbar {
@@ -160,9 +162,11 @@ html[data-theme="dark"] footer {
 
 html[data-theme="light"] .navbar {
   border-bottom: var(--ifm-toc-border-color) 1px solid;
+
+
 }
 footer{
-  font-size: 0.9em;
+
   margin-top: 10%;
 }
 
@@ -210,8 +214,8 @@ html[data-theme="light"] .footer {
 }
 
 .navbar__logo {
-  height: 50px;
-  width: 50px;
+  height: 3em;
+  width: 4em;
 }
 
 .menu__link {
@@ -321,5 +325,9 @@ iframe {
 a{
   text-decoration: none !important;
   text-transform: none !important;
+
+}
+.theme-doc-footer-edit-meta-row{
+  padding: 2%;
 
 }

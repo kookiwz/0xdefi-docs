@@ -19,15 +19,8 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/0xdefi-finance/0xdefi-docs/edit/master',
-          versions: {
-            current: {
-              label: 'current',
-            },
-          },
-          lastVersion: 'current',
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          editUrl: 'https://github.com/0xdefi-finance/0xdefi-docs/edit/main',
+         
         },
         blog: false,
         theme: {
@@ -51,12 +44,12 @@ const config = {
           {
             to: '/docs/Developers/Deployment%20Addresses',
             label: 'Contracts Addresses',
-            position: 'left',
+            position: 'right',
           },
           {
             to: '/docs/Ecosystem/Build%20on%200xDefi',
             label: 'Ecosystem',
-            position: 'left',
+            position: 'right',
           },
           {
             to: '/docs/FAQ/General%20FAQ',
