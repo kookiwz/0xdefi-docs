@@ -167,7 +167,7 @@ html[data-theme="light"] .navbar {
 }
 footer{
 
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 html[data-theme="light"] footer {
@@ -329,5 +329,26 @@ a{
 }
 .theme-doc-footer-edit-meta-row{
   padding: 2%;
+
+}
+.menu__link{
+  padding: 4%;
+}
+.menu__link:hover{
+  background-color: rgba(10, 10, 10, 0.043);
+}
+
+html[data-theme="dark"] .menu__link:hover{
+  background-color: rgba(0, 0, 0, 0.401);
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: rgba(10, 10, 10, 0.043);
+  padding: 5%;
+
+}
+html[data-theme="dark"] .menu__link--active:not(.menu__link--sublist) {
+  background-color: rgba(0, 0, 0, 0.401);
+  padding: 5%;
 
 }
