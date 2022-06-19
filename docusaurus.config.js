@@ -6,7 +6,7 @@ const config = {
   title: 'Oxdefi',
   tagline: 'Documentation Portal',
   url: 'https://docs.0xdefi.finance/',
-  baseUrl: '/', 
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
@@ -19,15 +19,8 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/0xdefi-finance/0xdefi-docs/edit/master',
-          versions: {
-            current: {
-              label: 'current',
-            },
-          },
-          lastVersion: 'current',
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          editUrl: 'https://github.com/0xdefi-finance/0xdefi-docs/edit/main',
+         
         },
         blog: false,
         theme: {
@@ -40,21 +33,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '0xDefi',
+
+    
         logo: {
-          alt: 'Sushiswap Logo',
+          alt: '0xDefi Logo',
           src: 'img/logo_big.png',
+
         },
         items: [
           {
             to: '/docs/Developers/Deployment%20Addresses',
             label: 'Contracts Addresses',
-            position: 'left',
+            position: 'right',
           },
           {
             to: '/docs/Ecosystem/Build%20on%200xDefi',
             label: 'Ecosystem',
-            position: 'left',
+            position: 'right',
           },
           {
             to: '/docs/FAQ/General%20FAQ',
@@ -62,22 +57,24 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/0xDefi-finance',
+            to: 'https://github.com/0xDefi-finance',
             label: 'GitHub',
             position: 'right',
+
+            
           },
         ],
       },
       footer: {
-        style: 'dark',
+
         links: [
           {
             title: 'GitHub',
             items: [
               {
                 label: '0xDefi-Contracts',
-                href: 'https://github.com/0xDefi-Finance',
-              }
+                to: 'https://github.com/0xDefi-Finance',
+              },
             ],
           },
           {
@@ -85,11 +82,11 @@ const config = {
             items: [
               {
                 label: 'Home',
-                href: 'https://0xdefi.finance',
+                to: 'https://0xdefi.finance',
               },
               {
                 label: 'App',
-                href: 'https://app.0xdefi.finance',
+                to: 'https://app.0xdefi.finance',
               },
             ],
           },
@@ -98,11 +95,11 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/3q3d8gTwBn',
+                to: 'https://discord.gg/3q3d8gTwBn',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/0xdefi_finance',
+                to: 'https://twitter.com/0xdefi_finance',
               },
             ],
           },
@@ -119,6 +116,19 @@ const config = {
         respectPrefersColorScheme: false,
       },
     }),
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require('tailwindcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
 };
 
 module.exports = config;

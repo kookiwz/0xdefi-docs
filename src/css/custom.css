@@ -7,8 +7,11 @@
 
 /* You can override the default Infima variables here. */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;1,400&family=Inter:wght@400;500;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
   --ifm-color-primary: #3578e5;
   --ifm-color-primary-dark: #1d68e1;
@@ -44,6 +47,9 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.9em;
+
 }
 
 html[data-theme="dark"] {
@@ -73,7 +79,7 @@ html[data-theme="light"] {
 }
 
 .html {
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+  font-family:'Poppins', "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
     Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
@@ -82,8 +88,17 @@ html[data-theme="light"] {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-weight: 400;
+  background :linear-gradient(90deg, rgba(34,36,0,0.44723827030812324) 0%, rgba(9,9,121,0.01866684173669464) 55%, rgba(0,212,255,1) 100%)
 }
+/* html[data-theme="dark"] body{
+  background: -webkit-gradient(linear, left bottom, right top, from(rgb(23, 14, 56)), to(#000000)) fixed;
+height: 100%;
+}
+html[data-theme="light"] body{
+  background: -webkit-gradient(linear, left bottom, right top, from(#e0e6ff), to(#ffffff)) fixed;
+  height: 100%;
 
+} */
 .markdown a {
   color: #3578e5;
 }
@@ -133,24 +148,38 @@ h4 {
 
 .navbar {
   align-items: center;
+
 }
 
 html[data-theme="dark"] .navbar {
-  border-bottom: var(--ifm-toc-border-color) 1px solid;
+  /* border-bottom: var(--ifm-toc-border-color) 1px solid; */
 }
 
 html[data-theme="dark"] footer {
-  background-color: rgb(75, 75, 75);
-  border-top: var(--ifm-toc-border-color) .5px solid;
+  background-color: rgb(6, 6, 6);
+  border-top: rgb(50, 50, 50) .5px solid;
 }
 
 html[data-theme="light"] .navbar {
   border-bottom: var(--ifm-toc-border-color) 1px solid;
+
+
+}
+footer{
+
+  margin-top: 5%;
 }
 
 html[data-theme="light"] footer {
-  background-color: rgb(192, 192, 192);
+  background-color: rgb(255, 255, 255);
   border-top: var(--ifm-toc-border-color) .5px solid;
+
+}
+
+html[data-theme="light"] .footer {
+  background-color: rgb(255, 255, 255);
+  border-top: var(--ifm-toc-border-color) .5px solid;
+  color: #191b1f !important;
 }
 
 .container {
@@ -185,8 +214,8 @@ html[data-theme="light"] footer {
 }
 
 .navbar__logo {
-  height: 50px;
-  width: 50px;
+  height: 3em;
+  width: 4em;
 }
 
 .menu__link {
@@ -292,4 +321,34 @@ iframe {
   .footer {
     display: none;
   }
+}
+a{
+  text-decoration: none !important;
+  text-transform: none !important;
+
+}
+.theme-doc-footer-edit-meta-row{
+  padding: 2%;
+
+}
+.menu__link{
+  padding: 4%;
+}
+.menu__link:hover{
+  background-color: rgba(10, 10, 10, 0.043);
+}
+
+html[data-theme="dark"] .menu__link:hover{
+  background-color: rgba(0, 0, 0, 0.401);
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: rgba(10, 10, 10, 0.043);
+  padding: 5%;
+
+}
+html[data-theme="dark"] .menu__link--active:not(.menu__link--sublist) {
+  background-color: rgba(0, 0, 0, 0.401);
+  padding: 5%;
+
 }
